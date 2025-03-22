@@ -1,6 +1,6 @@
 
 
-# Connexion à la base de données
+# 🚀 Connexion à la base de données
 1. Assurez-vous que les informations de connexion (host, dbname, username, password) sont correctes et sécurisées. Évitez d'utiliser des identifiants par défaut comme root sans mot de passe dans un environnement de production.
 
     ## Validation des entrées utilisateur :
