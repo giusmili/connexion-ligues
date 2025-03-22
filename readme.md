@@ -55,3 +55,30 @@ try {
 # ces instructions PDO dovent se retrouver dans une méthode de class
         
 ```
+
+## Modèle de table
+```SQL
+CREATE TABLE `collaborateur` (
+  `id_collaborateur` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL,
+  `prenom` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  `telephone` varchar(20) DEFAULT NULL,
+  `date_de_naissance` date DEFAULT NULL,
+  `ville` varchar(100) DEFAULT NULL,
+  `pays` varchar(100) DEFAULT NULL,
+  `photo` varchar(255) DEFAULT NULL,
+  `est_admin` tinyint(1) DEFAULT 0
+)
+```
+## MCD
+
+```cmd
+Collaborateur (id_collaborateur, nom, prénom, email, mot_de_passe, téléphone, date_de_naissance, ville, pays, photo, service, est_admin)
+
+Service (id_service, nom_service)
+
+Relations :
+- Collaborateur (service) ---< Appartient à >--- Service (id_service)
+```
