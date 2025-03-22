@@ -19,19 +19,19 @@
 
 ```php
 try {
-                # bdd connection
-                $pdo = new PDO('mysql:host=localhost;dbname=m2l', 'root', '');
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        # bdd connection
+        $pdo = new PDO('mysql:host=localhost;dbname=m2l', 'root', '');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
-                 # bdd insert to data
-                $sql = "INSERT INTO collaborateur (nom, prenom, email, mot_de_passe, telephone, date_de_naissance, ville, pays, photo, est_admin)
+                # bdd insert to data
+       $sql = "INSERT INTO collaborateur (nom, prenom, email, mot_de_passe, telephone, date_de_naissance, ville, pays, photo, est_admin)
                         VALUES (:nom, :prenom, :email, :mot_de_passe, :telephone, :date_de_naissance, :ville, :pays, :photo, :est_admin)";
             
               
-                $stmt = $pdo->prepare($sql);
+        $stmt = $pdo->prepare($sql);
             
                
-                $data = [
+        $data = [
                     'nom' => 'Doe',
                     'prenom' => 'John',
                     'email' => 'john.doe@example.com',
@@ -45,13 +45,13 @@ try {
                 ];
             
                 # Exécution de la requête avec les données
-                $stmt->execute($data);
+        $stmt->execute($data);
                 print "<p>Données insérées avec succès.</p>";
             
             } catch (PDOException $e) {
                 print "Erreur : " . $e->getMessage();
-            }
+        }
 
-    # ces instructions PDO dovent se retrouver dans une méthode de class
+# ces instructions PDO dovent se retrouver dans une méthode de class
         
 ```
