@@ -1,0 +1,13 @@
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+}
+
+.form{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+header *, footer *{
+    text-align: center;
+}
