@@ -44,7 +44,7 @@ try {
                     'est_admin' => false
                 ];
             
-                # Exécution de la requête avec les données
+                # Exécution automatique de la requête avec les données
         $stmt->execute($data);
                 print "<p>Données insérées avec succès.</p>";
             
