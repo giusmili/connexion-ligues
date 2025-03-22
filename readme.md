@@ -82,3 +82,8 @@ Service (id_service, nom_service)
 Relations :
 - Collaborateur (service) ---< Appartient à >--- Service (id_service)
 ```
+## Explications
+    
+* Collaborateur : Cette entité représente chaque utilisateur de l'intranet. Elle contient  toutes les informations personnelles et professionnelles nécessaires.
+* Service : Cette entité représente les différents services de l'entreprise. Chaque collaborateur est associé à un service.
+* Relations : La relation entre Collaborateur et Service est de type "plusieurs-à-un", car plusieurs collaborateurs peuvent appartenir à un même service.
