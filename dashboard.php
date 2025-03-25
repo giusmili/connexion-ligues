@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once __DIR__ . '/controller/collaborateurs.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,7 +31,27 @@
         The fact is, these divisions are reckoned from noon to noon, so that there are night as well as day quarters; and as it is very seldom that ships venture close in in the dark, the chance of a pilot coming on board then is very small. However, I easily consoled myself. 
         Going down into the saloon, I saw a lecture announced.
         </p>
-        
+        <ul>
+        <?php foreach ($collaborateurs as $collaborateur): ?>
+              
+                    <li><?= htmlspecialchars($collaborateur['id_collaborateur']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['nom']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['prenom']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['email']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['telephone']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['ville']) ?></li>
+                    <li><?= htmlspecialchars($collaborateur['pays']) ?></li>
+                    <li>
+                        <?php if (!empty($collaborateur['photo'])): ?>
+                            <img src="<?= htmlspecialchars($collaborateur['photo']) ?>" alt="Photo">
+                        <?php else: ?>
+                            <span>Aucune photo</span>
+                        <?php endif; ?>
+                    </li>
+                    <li><?= ((int)$collaborateur['est_admin']) ? '✅' : '❌' ?></li>
+                
+            <?php endforeach; ?>
+            </ul>
     </section>
 </main>
 <footer>

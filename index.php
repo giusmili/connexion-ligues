@@ -19,7 +19,7 @@
 <main>
     <div class="form" role="region" aria-labelledby="formulaire">
         <fieldset>
-            <legend>🔒 Connexion admin</legend>
+            <legend><span aria-hidden="true">🔒</span> Connexion admin</legend>
             <form id="formulaire" action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" required placeholder="email">
