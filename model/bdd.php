@@ -11,7 +11,7 @@
                         VALUES (:nom, :prenom, :email, :mot_de_passe, :telephone, :date_de_naissance, :ville, :pays, :photo, :est_admin)";
             
               
-                $stmt = $pdo->prepare($sql);
+                $req = $pdo->prepare($sql); # requete préparé
             
                
                 $data = [
@@ -27,12 +27,12 @@
                     'est_admin' => false
                 ];
             
-                // Exécution de la requête avec les données
-                $stmt->execute($data);
+                # Exécution de la requête avec les données
+                $req->execute($data);
                 print "<p>Données insérées avec succès.</p>";
             
             } catch (PDOException $e) {
-                print "Erreur : " . $e->getMessage();
+                print "Erreur(s) : " . $e->getMessage();
             }
         }
     }
