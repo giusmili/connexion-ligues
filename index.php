@@ -24,7 +24,7 @@
                 <input type="email" id="email" name="email" required placeholder="email">
                 <label for="mot_de_passe">Mot de passe :</label>
                 <input type="password" id="mot_de_passe" name="mot_de_passe" required placeholder="mot de passe">
-                <input type="submit" value="Se connecter">
+                <input type="submit" value="Se connecter" >
             </form>
         </fieldset>
         <?php

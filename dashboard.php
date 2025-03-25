@@ -52,6 +52,8 @@
                 
             <?php endforeach; ?>
             </ul>
+            <a href="logout.php" class="button btn-warning">Déconnexion</a>
+
     </section>
 </main>
 <footer>

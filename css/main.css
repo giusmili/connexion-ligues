@@ -4,6 +4,7 @@ body{
     min-height: 100svh;
    
 }
+
 ul li{
     list-style: none;
 }
@@ -44,6 +45,15 @@ section p{
     object-fit: cover;
     width: 20%;
 }
+section .btn-warning{
+    background-color: #d00909;
+    border: 0;
+}
+form input[type="submit"]{
+    background-color: #222;
+    border: 0;
+}
+
 form label{
     font-weight: normal;
 }
