@@ -1,5 +1,5 @@
 <?php
-require_once 'connexion.php';
+require_once 'connexion_isAdmin.php';
 
 
 try {

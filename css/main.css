@@ -4,6 +4,9 @@ body{
     min-height: 100svh;
    
 }
+ul li{
+    list-style: none;
+}
 
 .form{
     max-width: 80rem;
@@ -36,7 +39,11 @@ section p{
     font-style: italic;
     color: #5e5d5d;
 }
-
+.collection-collab .picture img{
+    display: inline-block;
+    object-fit: cover;
+    width: 20%;
+}
 form label{
     font-weight: normal;
 }

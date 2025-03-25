@@ -31,24 +31,24 @@
         The fact is, these divisions are reckoned from noon to noon, so that there are night as well as day quarters; and as it is very seldom that ships venture close in in the dark, the chance of a pilot coming on board then is very small. However, I easily consoled myself. 
         Going down into the saloon, I saw a lecture announced.
         </p>
-        <ul>
+        <ul class ="collection-collab">
         <?php foreach ($collaborateurs as $collaborateur): ?>
               
-                    <li><?= htmlspecialchars($collaborateur['id_collaborateur']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['nom']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['prenom']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['email']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['telephone']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['ville']) ?></li>
-                    <li><?= htmlspecialchars($collaborateur['pays']) ?></li>
-                    <li>
+            <li class="picture">
                         <?php if (!empty($collaborateur['photo'])): ?>
                             <img src="<?= htmlspecialchars($collaborateur['photo']) ?>" alt="Photo">
                         <?php else: ?>
                             <span>Aucune photo</span>
                         <?php endif; ?>
                     </li>
-                    <li><?= ((int)$collaborateur['est_admin']) ? '✅' : '❌' ?></li>
+                    <li>Nom : <?= htmlspecialchars($collaborateur['nom']) ?></li>
+                    <li>Prénom : <?= htmlspecialchars($collaborateur['prenom']) ?></li>
+                    <li>Email : <?= htmlspecialchars($collaborateur['email']) ?></li>
+                    <li>Téléphone : <?= htmlspecialchars($collaborateur['telephone']) ?></li>
+                    <li>Ville : <?= htmlspecialchars($collaborateur['ville']) ?></li>
+                    <li>Pays : <?= htmlspecialchars($collaborateur['pays']) ?></li>
+                   
+                    <li>Admin : <?= ((int)$collaborateur['est_admin']) ? '✅' : '❌' ?></li>
                 
             <?php endforeach; ?>
             </ul>
