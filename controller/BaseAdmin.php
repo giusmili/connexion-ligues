@@ -7,7 +7,7 @@
             echo "<p>Vous êtes connecté en tant qu'administrateur.</p>";
         }
     } else {
-        # Redirigez l'utilisateur vers la page de connexion s'il n'est pas connecté
-        header("Location: login.php");
+        # Redirigez la personne vers la page de connexion s'il n'est pas connecté
+        header("Location: index.php"); 
         exit();
     }
