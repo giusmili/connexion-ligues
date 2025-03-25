@@ -38,6 +38,7 @@ class Admin{
         
                             header("Location: dashboard.php"); 
                             exit();
+                            
                         } else {
                             echo "Mot de passe incorrect.";
                         }
