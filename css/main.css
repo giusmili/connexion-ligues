@@ -2,6 +2,7 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
+   
 }
 
 .form{
@@ -10,4 +11,36 @@ body{
 }
 header *, footer *{
     text-align: center;
+}
+header{
+    background-color: #d63031;
+    margin-bottom: 6rem;
+}
+header h1, :is(p){
+    font-size: xx-large;
+    color: #fff;
+    margin: 0;
+    line-height: 7rem;
+   
+}
+section h2{
+    font-size: x-large;
+    margin: 0;
+}
+section p{
+    font-size: inherit;
+    color: #1c0101;
+    line-height: inherit;
+}
+[placeholder]{
+    font-style: italic;
+    color: #5e5d5d;
+}
+
+form label{
+    font-weight: normal;
+}
+footer *{
+    color: initial;
+    font-size: inherit;
 }
